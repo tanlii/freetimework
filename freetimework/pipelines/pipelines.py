@@ -1,5 +1,4 @@
-from freetimework.freetimework.db.db_model import FreeTimeWorkModel
-from itemadapter import ItemAdapter
+from work.freetimework.db.db_model import FreeTimeWorkModel
 import datetime
 
 

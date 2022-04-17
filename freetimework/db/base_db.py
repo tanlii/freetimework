@@ -4,7 +4,7 @@ from peewee import Model
 # 线上etsy端数据
 HOST = "127.0.0.1"  # us机器用内网，其他机器用外网
 USER = "root"
-PASSWORD = ""
+PASSWORD = "123456"
 PORT = 3306
 
 database = MySQLDatabase(
@@ -12,7 +12,11 @@ database = MySQLDatabase(
     user=USER,
     password=PASSWORD,
     port=PORT,
-    database="etsy_data_us",
+    database="freetimework",
     charset="utf8mb4",
 )
 
+
+class BaseModel(Model):
+    class Meta:
+        database = database

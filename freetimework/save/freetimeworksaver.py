@@ -1,4 +1,4 @@
-from freetimework.freetimework.db.db_model import FreeTimeWorkModel
+from work.freetimework.db.db_model import FreeTimeWorkModel
 
 
 class FreeTimeWorkSave:

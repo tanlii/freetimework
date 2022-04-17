@@ -1,16 +1,15 @@
 import scrapy
-from freetimework.freetimework.parse.ommegaonlinparse import OmmegaOnlineParse
-from freetimework.freetimework.middlewares.create_headers import CreateHeaders
-from freetimework.freetimework.items.items import FreeTimeWorkItem
-from freetimework.freetimework.utlis.help_md5 import MakeMD5
+from work.test_work.test.test import Test
+from work.freetimework.parse.ommegaonlinparse import OmmegaOnlineParse
+from work.freetimework.middlewares.create_headers import CreateHeaders
+from work.freetimework.items.items import FreeTimeWorkItem
+from work.freetimework.utlis.help_md5 import MakeMD5
 
 
 class OmmegaonlineSpider(scrapy.Spider):
     name = 'ommegaonline_spider'
     channel_name = 'ommegaonline.org'
     channel_id = MakeMD5().get_md5(channel_name)
-
-
 
     def __init__(self):
         self.parse_product = OmmegaOnlineParse()
@@ -54,6 +53,7 @@ class OmmegaonlineSpider(scrapy.Spider):
 
                 }
             )
+            # break
 
     # 解析期刊期卷链接
     def parse_publish(self, response):
@@ -73,12 +73,13 @@ class OmmegaonlineSpider(scrapy.Spider):
                     "journal_url": journal_url,
                 }
             )
+            # break
 
     # 解析期卷中的文章链接
     def parse_article_list(self, response):
         html = response.text
         journal_url = response.meta["journal_url"]
-        articles = self.parse_product.parse_next_page(html)
+        articles = self.parse_product.parse_article_list(html)
         for article in articles:
             url = article["article_url"]
             meta = {"journal_url": journal_url}
@@ -89,6 +90,7 @@ class OmmegaonlineSpider(scrapy.Spider):
                 callback=self.parse,
                 meta=meta
             )
+            # break
 
     def parse(self, response):
         html = response.text

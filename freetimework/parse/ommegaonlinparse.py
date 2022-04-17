@@ -9,8 +9,8 @@ class OmmegaOnlineParse:
     def parse(self, res_content):
         product = dict()
         email_author = self.parse_email_author(res_content)
-        product["author"] = email_author["author"]
-        product["email"] = email_author["email"]
+        product["author"] = email_author.get("author")
+        product["email"] = email_author.get("email")
         product["article_abstract"] = self.parse_abstract(res_content)
         product["article_title"] = self.parse_title(res_content)
         product["journal_name"] = self.parse_journal_name(res_content)
@@ -45,7 +45,7 @@ class OmmegaOnlineParse:
 
     def parse_email_author(self, res_content):
         email_author = dict()
-        pattern = '<h2>Corresponding Author</h2>(.*?)<a title="([^"]+)"'
+        pattern = '<h2>Corresponding Author</h2>.*?<p [^>]+>(.*?)<a[^>]+>(.{1,50})</a>'
         res = re.findall(pattern, res_content, re.S)
         if res:
             author = res[0][0].split(',')[0].replace('<p>', '').strip()
@@ -188,18 +188,17 @@ font-size: 15px !important;
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="css" href="http://www.ghouse-sa.com/wp-content/themes/bridge/framework/admin/assets/css/scss/qodef-ui/qodef-ui.scss">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <meta name=keywords content="Sickle; Transition; Disparities">
-    <meta name=description content="&nbsp;
-Background: Young adults with sickle cell anemia are at high risk for increased hospitalization and death at the time of transition to adult care. This may be related to failure of the transition system to prepare young adults for the adult healthcare system. This qualitative study was designed to identify factors related to transition that may affect the health of adults with sickle cell anemia.Procedure: Ten patients currently treated in an adult hematology clinic participated in semi-structured qualitative interviews to describe their experience transitioning from pediatric to adult care and differences in adult and pediatric healthcare systems.Results: Participants were generally unprepared for the adult healthcare system. Negative issues experienced by participants included physician mistrust, difficulty with employers, keeping insurance, and stress in personal relationships. Positive issues experienced by participants included improved self efficiency with improved self care and autonomy.Conclusions: In the absence of a formalized transition program, adults with sickle cell anemia experience significant barriers to adult care. In addition to medical history review and identification of an adult provider, transition programs should incorporate strategies to navigate the adult medical system, insurance and relationships as well as encouraging self efficiency." >
-       <meta name="citation_title" content="Exploring Adult Care Experiences and Barriers to Transition in Adult Patients with Sickle Cell Disease" />
-     <meta name="citation_author" content="Jeffrey Lebensburger" />
-     <meta name='citation_author' content='Halanych'/><meta name='citation_author' content=' J. H2'/><meta name='citation_author' content=' Howard'/><meta name='citation_author' content='T. H1'/><meta name='citation_author' content=' Hilliard'/><meta name='citation_author' content=' L. M1'/><meta name='citation_author' content=' Lebensburger'/><meta name='citation_author' content=' J. D1'/>     
+    <meta name=keywords content="Materials-Science; Rescue Technology">
+    <meta name=description content="" >
+       <meta name="citation_title" content="View point of Nanotechnology and Material Science " />
+     <meta name="citation_author" content="Kenji  Uchino" />
+     <meta name='citation_author' content=''/>     
      <meta name="citation_author" content="Ommega Internationals">
 
-     <meta name="citation_publication_date" content="2015-09-06">
-     <meta name="citation_journal_title" content="International Journal of Hematology and Therapy" />
+     <meta name="citation_publication_date" content="2014-12-28">
+     <meta name="citation_journal_title" content="Journal of Nanotechnology and Materials Science" />
 
-     <meta name="citation_year" content="2015" />
+     <meta name="citation_year" content="2014" />
 
      <meta name="citation_volume"  content="1" />
 
@@ -207,18 +206,18 @@ Background: Young adults with sickle cell anemia are at high risk for increased 
 
      
 
-    <meta name="citation_firstpage" content="0" />
-    <meta name="citation_lastpage" content="0" />
-    <meta name="citation_DOI" content="10.15436/2381-1404.15.003" />
+    <meta name="citation_firstpage" content="1" />
+    <meta name="citation_lastpage" content="2" />
+    <meta name="citation_DOI" content="10.15436/2377-1372.14.e001" />
     
     <meta name="citation_publisher" content="Ommega Internationals" />
 
-     <meta name="citation_pdf_url" content="https://www.ommegaonline.org/articles/publishimages/14946_Exploring-Adult-Care.pdf" />
-     <meta name="citation_fulltext_html_url" content="https://www.ommegaonline.org/article-details/article/451  "/>
-     <meta name="citation_xml_url" content="https://www.ommegaonline.org/home/articlexml/451"/>
+     <meta name="citation_pdf_url" content="https://www.ommegaonline.org/articles/publishimages/14999-Viewpoint-of-Nanotechnology-and-Material-Science.pdf" />
+     <meta name="citation_fulltext_html_url" content="https://www.ommegaonline.org/article-details/article/63  "/>
+     <meta name="citation_xml_url" content="https://www.ommegaonline.org/home/articlexml/63"/>
      
-     <meta name="citation_issn" content="2381-1404"/>
-    <title>Exploring Adult Care Experiences and Barriers to Transition in Adult Patients with Sickle Cell Disease</title>
+     <meta name="citation_issn" content="2377-1372"/>
+    <title>View point of Nanotechnology and Material Science </title>
 
     <script type="text/javascript" src="https://www.ommegaonline.org/js/wp-emoji-release.min.js"></script>
     <style type="text/css">
@@ -2049,27 +2048,19 @@ padding-top: 20px;" src="https://www.ommegaonline.org/images/logo_ommega.png" al
                                                     </p>
                                                 </div>
                                                 <div class="qodef-post-info">
-                                                    <div class="">Research                                                    </div>
-                                                    <div class="">Publish Date : 2015-09-06                                                    </div>
+                                                    <div class="">Editorial                                                    </div>
+                                                    <div class="">Publish Date : 2014-12-28                                                    </div>
                                                 </div>
                                                 <div class="qodef-post-info">
-                                                    <div class="">International Journal of Hematology and Therapy                                                    </div>
-                                                                                                        
-                                                    <div class=""><a href='https://doi.org/10.15436/2381-1404.15.003' target='_blank'>
-                                                         <input style='border:none; width:275px;' type='text' value='https://doi.org/10.15436/2381-1404.15.003' id='myInput'/></a>
-                                                    </div>
-                                                    <div class="">
-                                                      
-                                                        <button onclick="myFunction()">Copy doi</button>
-                                                
-                                                    </div>                                                 </div>
+                                                    <div class="">Journal of Nanotechnology and Materials Science                                                    </div>
+                                                                                                    </div>
                                                    
                                                 <div>
-                                                    <h2>Exploring Adult Care Experiences and Barriers to Transition in Adult Patients with Sickle Cell Disease</h2>
+                                                    <h2>View point of Nanotechnology and Material Science </h2>
                                                 </div>
-                                                <span class="qodef-quote-author" style="font-size: 16px;">Jeffrey Lebensburger  </span>
+                                                <span class="qodef-quote-author" style="font-size: 16px;">Kenji  Uchino  </span>
                                                 <br>
-                                               Halanych, J. H<sup>2</sup>, Howard,T. H<sup>1</sup>, Hilliard, L. M<sup>1</sup>, Lebensburger, J. D<sup>1</sup>                                    
+                                                                                   
                                                 <div class="qodef-post-mark">
                                                     <span class="fa fa-quote-right quote_mark">
                             </span>
@@ -2106,220 +2097,53 @@ padding-top: 20px;" src="https://www.ommegaonline.org/images/logo_ommega.png" al
                                                                                                             <div class="article_info_block1" id="affiliationn" style="display: block;">
                                                             <h2>Affiliation</h2>
                                                             <p>
-                                                               <p><sup>1</sup> Pediatric Hematology Oncology, University of Alabama, Birmingham, Alabama,USA<br /><sup>2</sup>Department of Medicine, Division of Preventive Medicine, University of Alabama, Birmingham, Alabama, USA</p>                                                            </p>
+                                                               <p>Electrical Engineering, International Center for Actuators and Transducers, The Pennsylvania State University, USA</p>                                                            </p>
                                                         </div>
                                                                                                                                                                         <div class="article_info_block1">
                                                             <h2>Corresponding Author</h2>
                                                             <p>
-                                                              <p>Bemrich-Stolz, C. J., Department of Pediatrics, University of Alabama, Birmingham, USA. E-mail: <a title="cbstolz@peds.uab.edu" href="mailto:cbstolz@peds.uab.edu">cbstolz@peds.uab.edu</a></p>                                                            </p>
+                                                              <p class="p1" style="margin: 0in 0in 0.0001pt; text-align: justify;">Uchino, k. International Ctr. for Actuators &amp; Transducers, The Pennsylvania State &Acirc;&nbsp;&Acirc;&nbsp;University, University Park, PA 16802, USA. E-mail: <a href="mailto:kenjiuchino@psu.edu">kenjiuchino@psu.edu</a></p>                                                            </p>
                                                         </div>
                                                                                                                                                                         <div class="article_info_block1">
                                                             <h2>Citation</h2>
                                                             <p>
                                                             
-                                                                <p>Bemrich-Stolz, C. J., et al. Exploring Adult Care Experiences and Barriers to Transition in Adult Patients with Sickle Cell Disease. (2015). Int J Hematol and Therap 1(1): 1-5.</p>                                                            
+                                                                <p>Uchino, k. Viewpoint of Nanotechnology and Material Science. (2014) J Nanotech Mater Sci 1(1): 1-2.</p>                                                            
                                                             </p>
                                                         </div>
                                                                                                                 <div class="article_info_block1">
                                                             <h2>Copy rights</h2>
                                                             <p>
                                                                  <p>
-                                                                <p>&copy; 2015 Bemrich-Stolz, C. J. This is an Open access article distributed under the terms of Creative Commons Attribution 4.0 International License.</p>                                                                </p>
+                                                                <p>&copy; 2014 Uchino, K. This is an Open access article distributed under the terms of Creative Commons Attribution 4.0 International License.</p>                                                                </p>
                                                             </p>
                                                         </div>
                                                                                                                 <div class="article_info_block1">
                                                             <h2>Keywords</h2>
-                                                            <p>Sickle; Transition; Disparities                                                            </p>
+                                                            <p>Materials-Science; Rescue Technology                                                            </p>
                                                         </div>
                                                                                                             </div>
                                                     <div class="article_info_content">
-                                                                                                                 <div class="article_info_block1" id="ABSTRACT">
-                                                            <h5>Abstract</h5>
-                                                            <p style="text-align: justify;">
-                                                            <p>&nbsp;</p>
-<p style="text-align: justify;"><span style="font-weight: bold;">Background: </span>Young adults with sickle cell anemia are at high risk for increased hospitalization and death at the time of transition to adult care. This may be related to failure of the transition system to prepare young adults for the adult healthcare system. This qualitative study was designed to identify factors related to transition that may affect the health of adults with sickle cell anemia.<br /><span style="font-weight: bold;">Procedure: </span>Ten patients currently treated in an adult hematology clinic participated in semi-structured qualitative interviews to describe their experience transitioning from pediatric to adult care and differences in adult and pediatric healthcare systems.<br /><span style="font-weight: bold;">Results: </span>Participants were generally unprepared for the adult healthcare system. Negative issues experienced by participants included physician mistrust, difficulty with employers, keeping insurance, and stress in personal relationships. Positive issues experienced by participants included improved self efficiency with improved self care and autonomy.<br /><span style="font-weight: bold;">Conclusions: </span>In the absence of a formalized transition program, adults with sickle cell anemia experience significant barriers to adult care. In addition to medical history review and identification of an adult provider, transition programs should incorporate strategies to navigate the adult medical system, insurance and relationships as well as encouraging self efficiency.</p>                                                            </p>
-                                                        </div>
-                                                                                                                
+                                                                                                                 
                                                        <div class="article_info_block1">
                                                                                                                    <h5 id="intro">Introduction</h5>
                                                                                                                         <div id="fulltext" name="fulltext">
                                                                 <div id="intro">
-                                                                <p style="text-align: justify;">&emsp;&emsp;Treatment of complications and preventive care have significantly improved life span for patients living with sickle cell disease<sup>[1]</sup>. Almost 95% of patients with sickle cell disease live past 18 years of age and require transition to an adult healthcare setting<sup>[1,2]</sup>. The age at which these patients move to the adult care system varies among centers but often occurs between 18 and 22 years old. A major concern is that this age range has been associated with significant increases in health care utilization and risk of death<sup>[2-6]</sup>. This data suggests that the time of transition is a very high risk time for patients with sickle cell disease and may be due in part to failures of appropriate transition to the adult care setting.</p>
-<p style="text-align: justify;">&emsp;&emsp;Transition of care is described as the &ldquo;purposeful, planned movement of adolescents with chronic medical conditions from child-centered to adult-oriented health care&rdquo; with a goal of maximizing &ldquo;lifelong functioning and potential through the provision of high-quality, developmentally appropriate health care services that continue uninterrupted as the individual moves from adolescence to adulthood&rdquo;<sup>[7,8]</sup>. Transition is considered to be synonymous with transfer of care to an adult provider but it should instead be viewed as a process by which adolescents and young adults (AYA) are empowered with skills and knowledge to navigate adult health care systems and advocate for their health, families learn how to best support the patients in their transition and providers assist patients and families to set and meet transition goals in addition to facilitating transfer of care. Transition of care has become an increasingly recognized priority for all adolescents and young adults but particularly those with special health care needs.</p>
-<p style="text-align: justify;">&emsp;&emsp;It is imperative to determine which fears are justified and what new concerns are identified after transition in order to design specific interventions to address them. Given the complex nature of these personal issues, a qualitative research design was selected to allow for theory generating, inductive research on this topic from the adult patient perspective. We conducted semi-structured interviews with adult patients with sickle cell disease that had experienced transition with the goal of identifyingadult perspective on transition of care.</p>
-<div>&emsp;</div>
-<h5 id="METHODS">Methods</h5>
-<div>&emsp;</div>
-<p style="text-align: justify;">&emsp;&emsp;The purpose of this qualitative research study was to identify barriers to transition to adult care by exploring the transition experiences from the perspective of adult patients with sickle cell disease. After Institutional Review Board approval, ten participants were recruited during a six month period through the University of Alabama at Birmingham Hematology Clinic during regularly scheduled clinic visits (Table 1). Patients greater than 18 years old with any sickle cell genotype were eligible to participate. Patients who presented to clinic for current illness were excluded. As the local Children&rsquo;s Hospital only recently initiated a formalized transition program for patients with sickle cell disease, none of the participants had participated in such a program during their transition to adult care. To ensure reliability, all interviews were performed by one investigator (C.B.) in clinic or by telephone and audio recorded. (supplemental document 1) Interviews lasted 30-40 minutes and transcribed by the same investigator (C.B). The interview transcript was designed to facilitate description of the participants&rsquo; experiences of pediatric, transitional and adult care utilizing both open and closed-ended questions. Demographic and disease complication information was also collected from each participant.</p>
-<div>&emsp;</div>
-<p style="font-size: 12px; text-align: center;"><strong>Table 1: </strong>Characteristics of Study Sample</p>
-<table border="1" width="50%" cellspacing="0.1" align="center">
-<tbody>
-<tr>
-<th style="font-weight: bolder; text-align: center;">Characteristics</th>
-<th style="font-weight: bolder; text-align: center;">N = 10</th>
-</tr>
-<tr>
-<th style="font-weight: bolder; text-align: center;" colspan="2">Gender</th>
-</tr>
-<tr>
-<td>Male</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr>
-<td>Female</td>
-<td style="text-align: center;">7</td>
-</tr>
-<tr>
-<td>Age</td>
-<td style="text-align: center;">24-55</td>
-</tr>
-<tr>
-<th style="text-align: center;" colspan="2">Education completed</th>
-</tr>
-<tr>
-<td>Some high school</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td>High School Graduate</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<td>Some college</td>
-<td style="text-align: center;">6</td>
-</tr>
-<tr>
-<td>College Graduate</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<th style="font-weight: bolder; text-align: center;" colspan="2">Insurance</th>
-</tr>
-<tr>
-<td>Medicaid</td>
-<td style="text-align: center;">8</td>
-</tr>
-<tr>
-<td>Private Insurance</td>
-<td style="text-align: center;">2</td>
-</tr>
-<tr>
-<th style="font-weight: bolder; text-align: center;" colspan="2">Disability</th>
-</tr>
-<tr>
-<td>Yes</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr>
-<td>No</td>
-<td style="text-align: center;">1 (has applied)</td>
-</tr>
-<tr>
-<th style="font-weight: bolder; text-align: center;" colspan="2">Current therapy</th>
-</tr>
-<tr>
-<td>Hydroxyurea</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr>
-<td>Chronic transfusion</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<div>&emsp;</div>
-<p style="text-align: justify;"><strong>Data Analysis</strong><br />&emsp;&emsp;The researcher&rsquo;s position on this topic prior to initiating research was that transition was a difficult process for patients and which was exacerbated by a lack of transition program. First cycle coding methods used In-Vivo coding to capture exact quotes (codes) from patients. Two researchers independently coded the transcript and only codes with 100% inter-coder agreement were included in the final code book. Coding and identification of preliminary categories continued until data saturation was achieved, the key stopping component in qualitative research. Specifically, during analysis of the transcripts from the final interviews, no new codes or categories were generated, providing the required validation for the final sample size. Recoding and recategorizing was performed two additional times using a qualitative research analysis program (NVivo 10, QSR International) until final categories and themes were agreed upon by the researchers. Internal validity was established using triangulation and peer review. The integrity of the qualitative researcher was established by reflexivity, establishing any biases/assumptions prior to analysis. Reliability of the data was attained through consistency of one interviewer conducting the same semi-structured interview. External validity was established through rich thick descriptions obtained through In-Vivo coding.</p>
-<div>&emsp;</div>
-<h5 id="RESULTS">Results</h5>
-<div>&emsp;</div>
-<p style="text-align: justify;">&emsp;&emsp;Coding of data identified 13 categories related to transition that revealed three distinct themes, 1) Living with SCD as an Adult, 2) Emotions Experienced during Transition, and 3) Self Efficiency. &ldquo;Living with SCD as an Adult&rdquo; focused on experiences that affect adults living with sickle cell disease, including five categories related to physician mistrust, access to care, insurance, employment, and relationships. (Figure 1) &ldquo;Emotions Experienced during Transition&rdquo; identified the emotions experienced during the transition which included categories of concerns for either new care setting or new doctor and patient readiness. &ldquo;Self-Efficiency&rdquo; included categories of improved self-maintenance and relationship with parents. (Figure 2).</p>
-<div>&emsp;</div>
-<p><a href="../../admin/journalassistance/picturegallery/481.jpg" target="_blank" rel="noopener" name="figure1"> <img src="../../admin/journalassistance/picturegallery/481.jpg" alt="https://www.ommegaonline.org/admin/journalassistance/picturegallery/481.jpg" width="200px;" height="120px" /></a></p>
-<p><strong>Figure 1: </strong></p>
-<p><a id="h8" class="position-top-50" name="h8"></a></p>
-<div>&emsp;</div>
-<p><a href="../../admin/journalassistance/picturegallery/482.jpg" target="_blank" rel="noopener" name="figure2"> <img src="../../admin/journalassistance/picturegallery/482.jpg" alt="https://www.ommegaonline.org/admin/journalassistance/picturegallery/482.jpg" width="200px;" height="120px" /></a></p>
-<p><strong>Figure 2: </strong></p>
-<p><a id="h8" class="position-top-50" name="h8"></a></p>
-<div>&emsp;</div>
-<p style="text-align: justify;">&emsp;&emsp;The largest category in this theme was &ldquo;physician mistrust&rdquo;, including subcategories of difficulties with pain management and general knowledge about sickle cell disease. While participants expressed positive relationships with their adult hematologist, codes related to relationships with emergency room doctors or primary care physicians were negative. Several participants expressed their belief that ER physicians treated them as &ldquo;drug seekers&rdquo; rather than as a patient. &ldquo;The worst thing (about adult care) is people don&rsquo;t treat you with respect and kindness. They treat you like a crack head.&rdquo; Another participant stated &ldquo;Treat me like you would want someone to treat you. Don&rsquo;t group me in a category of other SCD patients.&rdquo; Additionally, participants felt that ER doctors were hesitant to prescribe a sufficient quantity of pain medications to treat their pain crises at home which created a cycle in which they would have to return to the ER for more pain medications. The experience with their primary care provider identified concerns that these physicians did not have enough medical knowledge about sickle cell disease. &ldquo;Dr. X is my primary doctor but he doesn&rsquo;t really know anything about sickle cell disease so I have to tell him what to do..&rdquo; Another participant stated, &ldquo;he (Primary Medical Doctor) was really mean to me. He was a little bit arrogant. It was like he was blaming me for the sore on my leg (leg ulcers).&rdquo; The mistrust with emergency room and adult primary care doctors may lead to a serious health risk as patients, in an attempt to avoid the emergency room, describe different techniques they would use to manage their sickle cell complications at home.</p>
-<p style="text-align: justify;">&emsp;&emsp;The second category was &ldquo;access to care&rdquo; including subcategories of identifying adult providers, and transportation issues. While finding their first hematologist was easy, which may be biased as the patients were interviewed in a hematology clinic on the same medical campus as their pediatric hematologists, difficulties arose when their physician left or the patient moved to a new city. For the subcategory of transportation, one participant needed to have &ldquo;money wired&rdquo; to her so that she could pay for transportation to the hospital.</p>
-<p style="text-align: justify;">&emsp;&emsp;The third category of this theme was &ldquo;insurance&rdquo; including Subcategories of loss of insurance, physicians acceptance of insurance, and limitations with refills. Despite the fact that all participants in the study were insured, a number had difficulty navigating their insurance. Several participants expressed difficulty obtaining clinic appointments with doctors based on their insurance. Participants had exaggerated negative experiences with physician access when they lost insurance based on job termination as private insurance provided improved access to care. Finally, limitations in medication refill based on their insurance coverage lead to several participants not having enough pain medication.</p>
-<p style="text-align: justify;">&emsp;&emsp;The fourth category identified was employment, including subcategories of working with SCD and loss of employment. Interestingly, while jobs were not intended as a focus of the interview, participants frequently discussed difficulties that they encountered while working. They reported challenges with employers understanding sickle cell disease and complications of pain. Specifically, pain episodes were often managed at home, so participants would have to explain their frequent absences that were not accompanied by a doctor&rsquo;s excuse. Many participants had difficulty explaining frequent absences for pain crisis to their employers. &ldquo;You can&rsquo;t go in there telling them that you have these crises and I have to be out&rdquo;. Participants felt that they had difficulty remaining employed based on frequent pain crises. &ldquo;It&rsquo;s very difficult to hold employment because of the stress level.&rdquo;</p>
-<p style="text-align: justify;">&emsp;&emsp;The fifth category identified was relationships including subcategories of relationships at work and at home. Frequent absences for pain crises placed a strain on relationships with co-workers. One participant described a situation in which fellow employees would &ldquo;tease&rdquo; her about frequently missing work, asking her &ldquo;where have you been on vacation&rdquo;. At home, one participant acknowledged that SCD complications placed a strain on her marriage, &ldquo;(he did not) understand the cycle of pain and what it does.&rdquo; Aside from their mother, many participants felt less support from other family members. They explained how family members would minimize their disease, such as &ldquo;If I say &lsquo;oh my god my leg hurts so bad&rsquo; than he&rsquo;d say &lsquo;well mine hurts too&rsquo;&hellip; I just say OK dad, but it&rsquo;s a different type of hurt.&rdquo; Emotions Experienced During Transition</p>
-<p style="text-align: justify;">&emsp;&emsp;The second theme &ldquo;Emotions Experienced during Transition&rdquo; encompasses codes related to the patients beliefs about the transition process. Participants described their pediatric medical experiences with language including, &ldquo;it was wonderful, doctors were supportive,&rdquo; &ldquo;they try to help you more,&rdquo; and &ldquo;they showed you respect.&rdquo; When transition was first discussed, a number of participants were surprised and felt abandoned. &ldquo;Why are you trying to send me over there? I&rsquo;ve known you since I was a little girl to now and how could you&rdquo;. I was worried about &ldquo;who was going to be my doctor and was she going to be nice from the time (I transition). How to get used to being over here instead of Children&rsquo;s the different scenery&rdquo;. The age of transition varied among participants from 18-22 years and without a history of a structured transition at this institution, patients were often transferred to adult doctors within weeks to months of being told about transition.</p>
-<p style="text-align: justify;">&emsp;&emsp;The final theme identified was &ldquo;Self efficiency&rdquo; as several patients experienced an improved ability to care for themselves and understand their disease after transition.(figure 2) Categories in this theme include &ldquo;improved self care&rdquo;, &ldquo;relationship with parents&rdquo;, &ldquo;reflections on transition&rdquo; The first category &ldquo;improved self care&rdquo; included knowing how to handle sickle cell complications and understanding their body. &ldquo;I pretty much know how to handle it now. When I felt these excruciating pains coming as a kid, I didn&rsquo;t know what to do.&rdquo; The second category involved the change in their relationship with parents who now would act as an advisor or assist with practical issues. Several participants believed that their ability to manage their disease was related to their independence from their parents. One participant stated that it was easier to care for her since &ldquo;I make my own decisions now.&rdquo; While the overall feeling of participants was one of apprehension about leaving pediatrics, this independence in medical decision making allowed them to reflect on the benefit of leaving the pediatric setting. A participant who stayed until she was 21 stated, &ldquo;He should have let me go at the age of 19. Children&rsquo;s hospital is only for children.&rdquo; Another participant wondered, &ldquo;I was an adult going to a children&rsquo;s doctor. I felt out of place.&rdquo;</p>
-<div>&emsp;</div>
-<h5 id="DISCUSSION">Discussion</h5>
-<div>&emsp;</div>
-<p style="text-align: justify;">&emsp;&emsp;A significant emphasis is being placed on enhancing transition of care for all diseases. The US Department of Health and Human Services has included a need to &ldquo;increase the proportion of youth with special health care needs whose health care provider has discussed transition planning from pediatric to adult health care&rdquo; as one of their Healthy People 2020 goals and the American Academy of Pediatrics, American Academy of Family Physicians and American College of Physicians-American Society of Internal Medicine have published a consensus statement and an algorithm to assist physicians in understanding the need for transition and implementing transition programs in their practice<sup>[8-11]</sup>. Recently published quality of care guidelines for sickle cell anemia recommend that a transition plan should be developed for all patients and that adolescents should be notified of the need to transition, but specifics regarding structure of such programs remain lacking<sup>[10]</sup>. Despite this enthusiasm for transition programs, there is a dearth of literature examining the outcomes associated with various programs making development of evidence-based programs for patient transition difficult<sup>[12]</sup>. Though the specific details of programs may vary, transition programs have the potential to require significant amounts of time for both providers and families. It is important to focus programs on topics that are most likely to impact health in adulthood. A number of studies have examined concerns of older pediatric patients, their caregivers and providers as they neared the time for transition<sup>[13-19]</sup>. Unfortunately, scant data limited to small samples exists to ascertain if the concerns noted prior to transition were actual barriers to completing transition or receiving care in adulthood<sup>[20]</sup>. This manuscript provide a patient centered perspective that is vital to improving the process of transition of care.</p>
-<p style="text-align: justify;">&emsp;&emsp;Adult patients with sickle cell provide insights about transition to adult care that should be incorporated into pediatric sickle cell transition programs. Prior concerns reported by pediatric patients remain relevant in the adult setting. (Table 2) Additionally, several new issues related to transition were identified and should be incorporated into transition programs, such as developing relationships with loved ones and employees/employers who do not understand the complications of sickle cell anemia, teaching patients strategies to handle difficult situations in the emergency room or with primary care providers, identifying new sickle cell providers if they move or their provider leaves, and how to navigate obtaining insurance with job termination.</p>
-<div>&emsp;</div>
-<p style="font-size: 12px; text-align: center;"><strong>Table 2: </strong>Concerns expressed by patients prior to transition to adult care</p>
-<table border="1" width="50%" cellspacing="0.1" align="center">
-<tbody>
-<tr>
-<td>Leaving comfortable pediatric setting<sup>[10, 11, 14, 15]</sup></td>
-</tr>
-<tr>
-<td>Going to a doctor unfamiliar with treating sickle cell disease<sup>[11]</sup></td>
-</tr>
-<tr>
-<td>Will my parents allow patients to become independent<sup>[11,15]</sup></td>
-</tr>
-<tr>
-<td>How will I pay for medical treatment<sup>[10]</sup></td>
-</tr>
-<tr>
-<td>Will I be treated as an adult<sup>[10]</sup></td>
-</tr>
-<tr>
-<td>Will adult providers understand how sickle cell disease affects me as an individual<sup>[10,14]</sup></td>
-</tr>
-<tr>
-<td>Will adult staff believe me when I am in pain[10]</td>
-</tr>
-</tbody>
-</table>
-<p style="text-align: justify;">&emsp;&emsp;A major emphasis of transition programs is to educate patients about their disease and medical history. This education is necessary as several of the adult experiences confirm that adult primary care providers or emergency room physicians may not be comfortable or knowledgeable about treating patients with sickle cell anemia. It is important for patients to be educated on how to best navigate situations in which they perceive that an adult provider does not believe their reports of pain or recognize the unique way that sickle cell disease affects them as individuals. Recommendations for how to educate patients about this concern are difficult as the researchers could not identify whether this issue represents true physician disbelief, patient misunderstanding of physician&rsquo;s feelings or poor communication on the part of the provider. Some component of this discrepancy in disease management may be related to the lack of understanding of the differences in culture between pediatric and adult medicine. It has been suggested that addressing the differences in culture between the subspecialties my help adolescents navigate the transition<sup>[21]</sup>. If provider attitudes also play a role in patient beliefs regarding their care, it would be important to continue to study those attitudes, outcomes associated with different attitudes towards patients with sickle cell disease in pain and, if significant, methods for modifying attitudes<sup>[21,22]</sup>.</p>
-<p style="text-align: justify;">&emsp;&emsp;The positive experiences of the adult participants highlight some benefits of transition that should be conveyed to pediatric patients during the time of transition. Despite the fact that a few participants reported worse overall health during adulthood, most participants believed that they were better able to understand and control their disease complications as an adult. Parents allowed the young adult patients to experience medical independence. Finally, after transition, patients realize the need to leave pediatric facilities as natural and appropriate for their stage of maturation. Incorporating this knowledge may be comforting to patients that approach transition with apprehension.</p>
-<p style="text-align: justify;">&emsp;&emsp;Unfortunately, several barriers to transition and negative experiences in adult care are not easily addressed through transition programs. Though identification of an adult provider is important and incorporated in all transition programs, it is not clear what the most appropriate adult care provider for these patients would be. In a national survey of sickle cell transition programs, despite 97% of programs reporting that they had identified a provider to accept their patients, only 60% of centers routinely transfer care to a hematologist specializing in sickle cell anemia<sup>[23]</sup>. A 2008 survey of general internal medicine and pediatric providers found that only one third of IM physicians would be comfortable serving as the primary care provider for patients with sickle cell disease<sup>[24]</sup>. Further research is needed to determine if internal medicine physicians are able to provide care equivalent to that provided by hematologists and how to best engage them to take on these patients. With decreasing reimbursements for coordination of care and preventive care in general in addition to a small hematology workforce willing to accept patients with sickle cell, without changes, pediatric providers are likely to find a smaller population of potential providers in the future<sup>[24]</sup>.</p>
-<p style="text-align: justify;">&emsp;&emsp;Limitations to this study include recall bias as all participants had completed transition from pediatric care more than 2 years prior to participation in interviews, however most of the concerns that participants recalled around the time of transition were consistent with published literature. A second limitation is that the study population only included patients who had, regardless of transition plan, found an adult hematologist to provide regular care. This would suggest that patients in this population differ from those who have been unable to find adult care for their sickle cell disease at a tertiary care setting in yet unknown ways. All participants in this study were insured and the majority is disabled. Though this is an important population to study, it may not be representative of all patients with sickle cell disease. While the sample size was small, this should not be viewed as a limitation as data saturation was achieved. Finally, inherent to qualitative research, the goal of this method of research is to develop a deeper understanding of how individuals make sense of their own reality so that theories can be inductively generated. Qualitative research is not intended to generalize findings to a larger population other institutions, but this limitation should not detract from the importance of this research design.</p>
-<p style="text-align: justify;">&emsp;&emsp;Transition planning should occur years prior to transferring a patient to an adult center. Education should focus both on disease education and strategies to navigate employment, insurance, personal relationships, and adult physicians. Future research should be performed to understand the experiences and barriers of adult patients with sickle cell disease who may not have a regular source of medical care outside of the inpatient and emergency room setting. In addition, qualitative research can identify the perspectives of adult primary care providers and emergency room physicians in relation to the barriers they perceive about transition and further explore issues associated with mistrust.</p>
-<div>&emsp;</div>
-<p style="text-align: justify;"><strong>Conflict of interest</strong><br />&emsp;&emsp;The authors have no relevant conflicts of interest, personal or financial, to disclose.</p>
-<div>&emsp;</div>
-<p style="text-align: justify;"><strong>Acknowledgment</strong><br />&emsp;&emsp;We would like to thank the patients living with sickle cell disease who participated in this research. Portions of this manuscript were presented at the American Society of Hematology Annual Meeting. J.L. receives salary support from the NIH 1K23HL127100-01.</p>
-<div>&emsp;</div>
+                                                                <p class="mb15" style="text-align: justify;">&emsp;&emsp;"Journal of Nanotechnology and Material Science" is an open access, peer reviewed journal with a sole intention of promulgation of research articles throughout the globe. Open access model provides the scientists and researchers a platform to share their innovations, discoveries and findings thus removing all the barriers that were imposed in traditional publishing models.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;I am delighted to write an editorial message for this new edition as one of the journal's Editorial Board Members. This edition is an omnibus of various areas, 1) Indium-free amorphous oxide semiconductor, 2) Carbon nano tubes, 3) Oxide ferroelectrics, and 4) Virosome of unilamellar phospholipid membrane. Using this opportunity, Iwould like to discuss the necessary strategies, which the materials research engineers need to keep in their minds in these decades, which are already exemplified in this issue. Though you might have already read my previous articles<sup>[1-3]</sup>, I dare to repeat my opinion for wider materials-science readers from a different angle.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;I have been a so-called "Navy Ambassador to Japan" (officially Associate Director at Asia Office of the US Office of Naval Research) in these four years until July this year. I had chances in deep involvement in setting multipleinternational R&amp;D related agreements between the US Department of Defense and Japanese governmental institutes, including the rescue technology projects relating with the Big Earthquake and consequent Fukushima Daiichi Nuclear Power Plant melt-down in 2011.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;During these diplomatic work tasks, I confirmed the urgent necessity of politically initiated technology development. Historically, the Japanese government set the four-Chinese-character slogan for encouraging the researchers along a particular direction. "(heavier, thicker, longer, and larger)" was the first one in 1960s, aiming at the infrastructure recovery from the WW-II ruins. A completely opposite slogan, "(lighter, thinner, shorter, and smaller)", started in 1980s, for strengthening the country economic power. I started my compact piezoelectric actuators for micromechatronic applications in the late 1970s under this trend.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;I would like to propose a new four-Chinese-character keyword for the new 21<sup>st</sup> century era, "cooperation, protection, reduction, and continuation". International cooperationand global collaboration in standardization of internet systems became essential to accelerate the mutual communication. The US-Japan Agreement in the "Rescue Robot" development for crisis occasions is one of the urgent tasks which I was involved. The Kyoto Protocol in December 1997 was a trigger to more wide international agreements linked to the United Nations Framework Convention on Climate Change in order to reduce greenhouse gas emission. This is a symbolic global regime for determining the materials' research direction in the 21<sup>st</sup> century. Accordingly, I am proud to announce that my invention "multilayer piezoelectric actuator" became one of the key technologies for reducing NO<sub>x</sub> or SO<sub>x</sub> in recent diesel engine automobiles.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;Protection of the territory and environment from the enemy or natural disaster, and of infectious disease spreadis mandatory. In addition to terrorist attacks, HID, Bird Flu and in particular EBOLA are now the worldwide headache. How can our materials be applied for these aims. Bio materials or medicine development is highly required. Reduction of toxic materials such as lead, heavy metals, dioxin, and of the use of resources and energy consumption is also the key, and the society continuation (i.e., status quo or Sustainable Society) is important to promote. Even in my research area, the long-term material champion, PZT, may be regulated in several years by RoHS (Restriction of Hazardous Substances Directive) due to Pb (lead) inclusion. I recognize various toxic compounds such as Indium Gallium Arsenideeven in semiconductor materials. Thus, the current material researchers needto seek alternative materials(environmentally friendly materials) for replacing toxic ones. Bio/medical materials such as hormones are important to develop, but their disposal way should also be seriouslyconsidered not to harm the environment. The material related with renewable energy generation is also the "must" for reducing nuclear power plants.</p>
+<p class="mb15" style="text-align: justify;">&emsp;&emsp;As a concluding remark, Uchino's recommendation is to learn global and domestic regimes/political strategies for 10 years ahead, and to reflect the materials development according to this direction.</p>
+<p>&nbsp;</p>
 <h5 id="REFERENCES">References</h5>
-<div>&emsp;</div>
+<p>&nbsp;</p>
 <div class="ol">
-<ol style="text-align: justify;">
-<li>1. <a href="https://www.ncbi.nlm.nih.gov/pubmed/23450875" target="_blank" rel="noopener">Lanzkron, S., Carroll, C. P., Haywood, C. Jr., et al. Mortality rates and age at death from sickle cell disease. (2013) Public Health Rep 128(2): 110- 116.</a></li>
-<li>2. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20194891" target="_blank" rel="noopener">Quinn, C. T., Rogers, Z. R., McCavit, T. L., et al. Improved survival of children and adolescents with sickle cell disease. (2010) Blood 115(17): 3447- 3452.</a></li>
-<li>3. <a href="https://www.ncbi.nlm.nih.gov/pubmed/20371788" target="_blank" rel="noopener">Brousseau, D. C., Owens, P. L., Mosso, A.L., et al. Acute care utilization and rehospitalizations for sickle cell disease. (2010) JAMA 303(13): 1288- 1294.</a></li>
-<li>4. <a href="https://www.ncbi.nlm.nih.gov/pubmed/16315251" target="_blank" rel="noopener">Shankar, S. M., Arbogast, P. G., Mitchel, E., et al. Medical care utilization and mortality in sickle cell disease: a population-based study. (2005) Am J Hematol 80(4): 262- 270.</a></li>
-<li>5. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21796763" target="_blank" rel="noopener">Dickerson, A. K., Klima, J., Rhodes, M. M., et al. Young adults with SCD in US children's hospitals: are they different from adolescents? (2012) Pediatr Blood Cancer 58(5): 741- 745.</a></li>
-<li>6. <a href="https://www.ncbi.nlm.nih.gov/pubmed/23335275" target="_blank" rel="noopener">Blinder, M.A., Vekeman, F., Sasane, M., et al. Age-related treatment patterns in sickle cell disease patients and the associated sickle cell complications and healthcare costs. (2013) Pediatr Blood Cancer 60(5): 828- 835.</a></li>
-<li>7. <a href="https://www.ncbi.nlm.nih.gov/pubmed/12456948" target="_blank" rel="noopener">Blum, R.W. Introduction. Improving transition for adolescents with special health care needs from pediatric to adult-centered health care. (2002) Pediatrics 110(6 Pt 2): 1301- 1303.</a></li>
-<li>8. <a href="https://www.ncbi.nlm.nih.gov/pubmed/12456949" target="_blank" rel="noopener">A consensus statement on health care transitions for young adults with special health care needs. (2002). Pediatrics 110(6 Pt 2): 1304- 1306. </a></li>
-<li>9. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21708806" target="_blank" rel="noopener">Supporting the health care transition from adolescence to adulthood in the medical home. (2011) Pediatrics. 128(1): 182- 200.</a></li>
-<li>10. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21844055" target="_blank" rel="noopener">Wang, C. J., Kavanagh, P. L., Little, A. A., et al. Quality-of-care indicators for children with sickle cell disease. (2011) Pediatrics 128(3): 484- 493.</a></li>
-<li>11. <a href="https://www.ncsl.org/research/health/healthy-people-2020-a-road-map-for-health.aspx" target="_blank" rel="noopener">Van Kalsbeek, M., Saunders, J. B. Healthy People 2020: a road map for health. (2011) NCSL 19(27): 1- 2. </a></li>
-<li>12. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3460672/" target="_blank" rel="noopener">Lebensburger, J. D., Bemrich-Stolz, C. J., Howard, T. H. Barriers in transition from pediatrics to adult medicine in sickle cell anemia. (2012) J Blood Med 3: 105- 112.</a></li>
-<li>13. <a href="https://www.ncbi.nlm.nih.gov/pubmed/7857954" target="_blank" rel="noopener">Telfair, J., Myers, J., Drezner, S. Transfer as a component of the transition of adolescents with sickle cell disease to adult care: adolescent, adult, and parent perspectives. (1994) J Adolesc Health 15(7): 558- 565.</a></li>
-<li>14. <a href="https://www.ncbi.nlm.nih.gov/pubmed/12024394" target="_blank" rel="noopener">Hauser, E. S., Dorn, L. Transitioning adolescents with sickle cell disease to adult-centered care. (1999) Pediatr Nurs 25(5): 479- 488.</a></li>
-<li>15. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19103405" target="_blank" rel="noopener">Bryant, R., Walsh, T. Transition of the chronically ill youth with hemoglobinopathy to adult health care: an integrative review of the literature. (2009) J Pediatr Health Care 23(1): 37- 48.</a></li>
-<li>16. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21602723" target="_blank" rel="noopener">Smith, G. M., Lewis, V. R., Whitworth, E., et al. Growing up with sickle cell disease: a pilot study of a transition program for adolescents with sickle cell disease. (2011) J Pediatr Hematol Oncol 33(5): 379- 382.</a></li>
-<li>17. <a href="https://www.ncbi.nlm.nih.gov/pubmed/15148858" target="_blank" rel="noopener">Telfair, J., Ehiri, J. E., Loosier, P. S., et al. Transition to adult care for adolescents with sickle cell disease: results of a national survey. (2004) Int J Adolesc Med Health 16(1): 47- 64.</a></li>
-<li>18. <a href="https://www.ncbi.nlm.nih.gov/pubmed/18796047" target="_blank" rel="noopener">Tuchman, L. K., Slap, G. B., Britto, M. T. Transition to adult care: experiences and expectations of adolescents with a chronic illness. (2008) Child Care Health Dev 34(5): 557 563.</a></li>
-<li>19. <a href="https://www.ncbi.nlm.nih.gov/pubmed/24807007" target="_blank" rel="noopener">Williams, C. P., Smith, C. H., Osborn, K., et al. Patient-centered approach to designing sickle cell transition education. (2015) J Pediatr Hematol Oncol 37(1): 43- 47.</a></li>
-<li>20. <a href="https://www.ncbi.nlm.nih.gov/pubmed/25188623" target="_blank" rel="noopener">Mennito, S., Hletko, P., Ebeling, M., et al. Adolescents with sickle cell disease in a rural community: are they ready to transition to adulthood? (2014) South Med J 107(9): 578- 582.</a></li>
-<li>21. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19233587" target="_blank" rel="noopener">Ratanawongsa, N., Haywood, C. Jr., Bediako, S. M., et al. Health care provider attitudes toward patients with acute vaso-occlusive crisis due to sickle cell disease: development of a scale. (2009) Patient Educ Couns 76(2): 272- 278.</a></li>
-<li>22. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21181560" target="_blank" rel="noopener">Haywood, C. Jr., Lanzkron, S., Hughes, M. T., et al. A video-intervention to improve clinician attitudes toward patients with sickle cell disease: the results of a randomized experiment. (2011) J Gen Intern Med 26(5): 518- 523.</a></li>
-<li>23. <a href="https://www.ncbi.nlm.nih.gov/pubmed/21594889" target="_blank" rel="noopener">Sobota, A., Neufeld, E. J., Sprinz, P., et al. Transition from pediatric to adult care for sickle cell disease: results of a survey of pediatric providers. (2011) Am J Hematol 86(6): 512- 515.</a></li>
-<li>24. <a href="https://www.ncbi.nlm.nih.gov/pubmed/19171604" target="_blank" rel="noopener">Peter, N. G., Forke, C. M., Ginsburg, K. R., et al. Transition from pediatric to adult care: internists' perspectives. (2009) Pediatrics 123(2): 417- 423.</a></li>
+<ol>
+<li style="text-align: justify;">1. <a href="http://symbiosisonlinepublishing.com/materialsscience-engineering/materialsscience-engineering04.php" target="_blank" rel="noopener">Uchino, K. "Politico-Engineering&minus;Politically-Initiated Engineering in Piezoelectric Devices". (2013) SOJ Materials Science &amp; Engineering 1(1): 10.</a></li>
+<li>2. <a href="http://www.actuator.de/UserFiles/File/ACTUATOR_14/shorties/A1_0.pdf" target="_blank" rel="noopener">Uchino, K. Piezoelectric Actuator Renaissance. Proc. 14th Int'l Conf. (2014) New Actuators, Bremen, Germany p: 37.</a></li>
+<li>3. <a href="http://www.degruyter.com/view/j/ehs.2014.1.issue-1-2/ehs-2013-0021/ehs-2013-0021.xml" target="_blank" rel="noopener">Uchino, K. "Piezoelectric Actuator Renaissance". (2014) J Energy Harvesting and Systems 1(1-2): 45&ndash;56.</a></li>
 </ol>
 </div>    
                                                                    </div>
@@ -2354,17 +2178,17 @@ padding-top: 20px;" src="https://www.ommegaonline.org/images/logo_ommega.png" al
                                                                     
                                                                     <td>
                                                                         <span id="downloads" style="font-size: 20px;      line-height: 20px;     color: #000;     font-weight: 700;     display: block;">                    
-                                        67                                      </span>
+                                        37                                      </span>
                                                                         <input type="hidden" name="" id="pagelike" value="1"> </td>
                                                                     
                                                                     <td>
-                                                                       <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=articles/publishimages/14946_Exploring-Adult-Care.pdf" onclick="save_download(67,451)"> <img class="pdfimg" align="center" src="https://www.ommegaonline.org/images/pdf.png" height="50" width="50"></a>
+                                                                       <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=articles/publishimages/14999-Viewpoint-of-Nanotechnology-and-Material-Science.pdf" onclick="save_download(37,63)"> <img class="pdfimg" align="center" src="https://www.ommegaonline.org/images/pdf.png" height="50" width="50"></a>
                                                                     </td>
                                                                     <td>
-                                                                       <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=admin/journalassistance/publishimages/1839_IJHT-15-RA-003.bib" onclick="save_download(67,451)"> <img class="pdfimg" src="https://www.ommegaonline.org/images/text.png" height="50" width="45"></a>
+                                                                       <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=admin/journalassistance/publishimages/864_JNMS-e001.bib" onclick="save_download(37,63)"> <img class="pdfimg" src="https://www.ommegaonline.org/images/text.png" height="50" width="45"></a>
                                                                     </td>
                                                                 <td>
-                                                                        <a target="_blank" href="https://www.ommegaonline.org/home/articlexml/451" onclick="save_download(67,451)"><img class="pdfimg" src="https://www.ommegaonline.org/images/xml.png" height="50" width="49"></a>
+                                                                        <a target="_blank" href="https://www.ommegaonline.org/home/articlexml/63" onclick="save_download(37,63)"><img class="pdfimg" src="https://www.ommegaonline.org/images/xml.png" height="50" width="49"></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -2423,13 +2247,13 @@ padding-top: 20px;" src="https://www.ommegaonline.org/images/logo_ommega.png" al
                                         <br>Download
                                       </span> </td>
                                                                     <td style="text-align: center; padding:5px;font-size: 12px">
-                                                                        <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=articles/publishimages/14946_Exploring-Adult-Care.pdf" onclick="save_download(67,451)">PDF</a>
+                                                                        <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=articles/publishimages/14999-Viewpoint-of-Nanotechnology-and-Material-Science.pdf" onclick="save_download(37,63)">PDF</a>
                                                                     </td>
                                                                     <td  style="text-align: center;padding:5px;font-size: 12px">
-                                                                        <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=admin/journalassistance/publishimages/1839_IJHT-15-RA-003.bib" onclick="save_download(67,451)">CITATION</a>
+                                                                        <a target="_blank" href="https://www.ommegaonline.org/download.php?download_file=admin/journalassistance/publishimages/864_JNMS-e001.bib" onclick="save_download(37,63)">CITATION</a>
                                                                     </td>
                                                                     <td  style="text-align: center;padding:5px;font-size: 12px">
-                                                                        <a target="_blank" href="https://www.ommegaonline.org/home/articlexml/451" onclick="save_download(67,451)">XML</a>
+                                                                        <a target="_blank" href="https://www.ommegaonline.org/home/articlexml/63" onclick="save_download(37,63)">XML</a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -2443,14 +2267,14 @@ padding-top: 20px;" src="https://www.ommegaonline.org/images/logo_ommega.png" al
                                                     </div>
                                                     <div class="article_share_info">
                                                         <p>
-                                                            <a style="color:#b1b1b1;" onclick="save_like('43','451')">
+                                                            <a style="color:#b1b1b1;" onclick="save_like('64','63')">
                                                                 
                                                             <span>   <span id="likeval">                    
-                                    43                                  </span></span>  </a>Likes
+                                    64                                  </span></span>  </a>Likes
                                   </p>
                                                      
                                                         <p>
-                                                            <span>5193                                </span>Views
+                                                            <span>3993                                </span>Views
                                                         </p>
                                                        <!-- <p>
                                                             <span>0                                </span>Cited-by

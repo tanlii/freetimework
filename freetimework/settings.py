@@ -1,4 +1,4 @@
-# Scrapy settings for freetimework project
+# Scrapy settings for work project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -13,7 +13,7 @@ SPIDER_MODULES = ['freetimework.spiders']
 NEWSPIDER_MODULE = 'freetimework.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'freetimework (+http://www.yourdomain.com)'
+# USER_AGENT = 'work (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -44,13 +44,13 @@ DOWNLOAD_DELAY = 0.5
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    'freetimework.middlewares.FreetimeworkSpiderMiddleware': 543,
+#    'work.middlewares.FreetimeworkSpiderMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'freetimework.middlewares.FreetimeworkDownloaderMiddleware': 543,
+#    'work.middlewares.FreetimeworkDownloaderMiddleware': 543,
 # }
 
 # Enable or disable extensions
@@ -62,7 +62,7 @@ DOWNLOAD_DELAY = 0.5
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'freetimework.freetimework.pipelines.pipelines': 300,
+    'work.freetimework.pipelines.pipelines.FreeTimeWorkPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -1,10 +1,10 @@
-from freetimework.freetimework.db.base_db import database
+from work.freetimework.db.base_db import BaseModel
 from peewee import *
 import datetime
 
 
-class FreeTimeWorkModel(database):
-    id = IntegerField(index=True, null=False)
+class FreeTimeWorkModel(BaseModel):
+    id = PrimaryKeyField()
     channel_id = CharField(index=True, null=False, default='0')
     channel_name = CharField(index=False, null=False, default='')
     publisher = CharField(null=False, default='')
@@ -22,3 +22,6 @@ class FreeTimeWorkModel(database):
     created_at = DateField(null=False, default=datetime.datetime.now())
     updated_at = DateField(null=False, default=datetime.datetime.now())
     status = IntegerField(default=1)
+
+    class Meta:
+        db_table = 'product_detail'
